@@ -11,10 +11,13 @@ namespace AP_Lab_02_1
     {
         static void Main()
         {
-            double ConvertDegToRad(double angleToConvert) => (Math.PI / 180) * angleToConvert;
+            double ConvertDegToRad(double angleToConvert)
+            {
+                return (Math.PI / 180) * angleToConvert;
+            } 
 
             // Input part
-            Console.Write("alpha: ");
+            Console.Write("alpha >>> ");
             double alpha = ConvertDegToRad(Double.Parse(Console.ReadLine()));
 
             double z1 = (Math.Sin(alpha) + Math.Sin(5 * alpha) - Math.Sin(3 * alpha)) / (Math.Cos(alpha) - Math.Cos(3 * alpha) + Math.Cos(5 * alpha)),
